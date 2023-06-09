@@ -1,6 +1,7 @@
-import express, { Application, Request, Response } from 'express'
+import express, { Application } from 'express'
 import cors from 'cors'
-import userRouter from './app/modules/users/user.route'
+import globalErrorHandler from './app/middlewares/globalErrorHandler'
+import routes from './app/routes'
 
 const app: Application = express()
 
@@ -11,11 +12,19 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 //Application route
-app.use('/api/v1/users', userRouter)
+// app.use('/api/v1/users', UserRoutes)
+// app.use('/api/v1/academic-semesters', AcademicSemesterRoutes)
+app.use('/api/v1/', routes)
 
 //Testing
-app.get('/', (req: Request, res: Response) => {
-  res.send('Working Successfully')
-})
+// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
+//   Promise.reject(new Error('unhandledRejection'))
+//   // res.send('Working Successfully')
+//   // throw new ApiError(400, 'Ore baba error')
+//   // next('ore baba error')
+// })
+
+// Global error handler
+app.use(globalErrorHandler)
 
 export default app
