@@ -1,0 +1,50 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\.fd3ef7a91c5ec0d47d52d9bae6330df80bd90f17-audit.json",
+    "files": [
+        {
+            "date": 1687169241615,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-19-06-16-error.log",
+            "hash": "b15f31dadb691624df3866d9f174590efd1064125b9cf195a49f6d84372fa3b0"
+        },
+        {
+            "date": 1687239299936,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-20-06-11-error.log",
+            "hash": "bd13e2f35f079fcb2ba61021ba9ef162a6e73c569bfa8c10741c873d46279d6e"
+        },
+        {
+            "date": 1687240938256,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-20-06-12-error.log",
+            "hash": "95e2a748137fa26f7d3c53e17c737d12374863e706840d41e942d782c053d6cc"
+        },
+        {
+            "date": 1687250252451,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-20-06-14-error.log",
+            "hash": "b223489fcee827aba4bbf9ab4c7c25517726988a94777cebf2f9cd9e1b6e0872"
+        },
+        {
+            "date": 1687251819160,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-20-06-15-error.log",
+            "hash": "32a43ebb7ce01a2e6d62505095fb24739db7b4cfc3fd10ec0cedce2d06adf767"
+        },
+        {
+            "date": 1687255273710,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-20-06-16-error.log",
+            "hash": "9e01835991b0a24fbe8aada6b583b5e1df8f74746f8824dbe979be93301568f7"
+        },
+        {
+            "date": 1687259434557,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-20-06-17-error.log",
+            "hash": "a04609496fa38c053e637004b3c6d7dee44c634e1993b92986a3a803bf25ac5f"
+        },
+        {
+            "date": 1687262482617,
+            "name": "D:\\Parvez\\university-mangement-auth-service\\logs\\winston\\errors\\phu-2023-20-06-18-error.log",
+            "hash": "ab4169151bab79837af974c91c6c37e052b24624ed65e3f0c0898a94b523525e"
+        }
+    ],
+    "hashType": "sha256"
+}
