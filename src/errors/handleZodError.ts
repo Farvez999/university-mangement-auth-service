@@ -11,7 +11,7 @@ const handleZodError = (error: ZodError): IGenericErrorResponse => {
   const statusCode = 400
   return {
     statusCode,
-    mesage: 'Validation Error',
+    message: 'Validation Error',
     errorMessage: errors,
   }
 }

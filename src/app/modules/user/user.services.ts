@@ -23,6 +23,7 @@ const createStudent = async (student: IStudent, user: IUser): Promise<IUser | nu
     student.academicSemester
   )
 
+  let newUserAllData = null
   const session = await mongoose.startSession()
   try {
     session.startTransaction()
@@ -44,6 +45,8 @@ const createStudent = async (student: IStudent, user: IUser): Promise<IUser | nu
       throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create user')
     }
 
+    newUserAllData = newUser[0]
+
     await session.commitTransaction()
     await session.endSession()
 
@@ -52,6 +55,27 @@ const createStudent = async (student: IStudent, user: IUser): Promise<IUser | nu
     await session.endSession()
     throw error
   }
+
+  if (newUserAllData) {
+    newUserAllData = await User.findOne({ id: newUserAllData.id }).populate(
+      {
+        path: 'student',
+        populate: [
+          {
+            path: 'academicSemester'
+          },
+          {
+            path: 'academicDepartment'
+          },
+          {
+            path: 'academicFaculty'
+          },
+        ]
+      },
+    )
+  }
+
+  return newUserAllData
 
 }
 
