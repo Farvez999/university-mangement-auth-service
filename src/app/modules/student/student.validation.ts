@@ -7,7 +7,7 @@ const updateStudentZodSchema = z.object({
       firstName: z.string().optional(),
       lastName: z.string().optional(),
       middleName: z.string().optional(),
-    }),
+    }).optional(),
     gender: z.enum([...gender] as [string, ...string[]]).optional(),
     dateOfBirth: z.string().optional(),
     email: z.string().email().optional(),
@@ -27,7 +27,7 @@ const updateStudentZodSchema = z.object({
       motherOccupation: z.string().optional(),
       motherContactNo: z.string().optional(),
       address: z.string().optional(),
-    }),
+    }).optional(),
     localGuardian: z.object({
       name: z.string().optional(),
       occupation: z.string().optional(),
@@ -35,7 +35,7 @@ const updateStudentZodSchema = z.object({
       address: z.string().optional(),
     }),
     profileImage: z.string().optional(),
-  }),
+  }).optional(),
 })
 
 export const StudentValidation = {
